@@ -11,9 +11,13 @@
   --ft-secondary: "Palanquin", sans-serif;
   --fc-header: #ffffff;
   --fc-description: #23053a;
+  --fc-ice-cream-title: #4a4e69;
   --fs-header: 4rem;
+  --fs-page-description: 1.3rem;
+  --fs-ice-cream-title: 2rem;
   --bg-header: #8e9aaf;
-  --bg-h1: #cbc0d3;
+  --bg-page-title: #cbc0d3;
+  --bg-ice-cream-title: #feeafa;
 }
 
 #page {
@@ -21,15 +25,29 @@
   justify-content: center;
   max-width: 385px;
   margin: 0 auto;
+  background: #eff1ff;
 }
 
-#ice-creams {
+#ice-cream-wrapper {
   display: grid;
   gap: 3.6rem;
 }
 
-body {
-  font-size: 1.6rem;
+.card {
+  position: relative;
+  font-size: var(--fs-ice-cream-title);
+}
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  padding: 0 2.3rem;
+  background-color: var(--bg-ice-cream-title);
+  border-radius: 20px;
+  font-size: var(--fs-ice-cream-title);
+  color: var(--fc-ice-cream-title);
+  line-height: 34px;
+  letter-spacing: 0.05em;
 }
 
 header {
@@ -43,7 +61,7 @@ header img {
 header h1 {
   font-family: var(--ft-primary);
   color: var(--fc-header);
-  background-color: var(--bg-h1);
+  background-color: var(--bg-page-title);
   padding: 0.8rem;
   line-height: 34px;
   letter-spacing: 0.05em;
@@ -57,7 +75,7 @@ main {
 }
 main p {
   font-family: var(--ft-secondary);
-  font-size: 1.3rem;
+  font-size: var(--fs-page-description);
   color: var(--fc-description);
   line-height: 2rem;
   text-align: center;
