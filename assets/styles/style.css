@@ -23,13 +23,14 @@
 #page {
   display: grid;
   justify-content: center;
-  max-width: 385px;
+  max-width: 450px;
   margin: 0 auto;
   background: #eff1ff;
 }
 
 #ice-cream-wrapper {
   display: grid;
+  justify-items: center;
   gap: 3.6rem;
 }
 
@@ -47,8 +48,19 @@
           animation: enlarging 700ms 600ms backwards;
 }
 
+.space-info {
+  font-family: var(--ft-secondary);
+  font-size: var(--fs-page-description);
+  color: var(--fc-description);
+  line-height: 2rem;
+  text-align: center;
+}
+
 .card {
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: var(--fs-ice-cream-title);
   -webkit-animation: downToTop 500ms 100ms backwards;
           animation: downToTop 500ms 100ms backwards;
@@ -78,20 +90,35 @@ header img {
   -webkit-animation: bounceInLeft 700ms 400ms backwards;
           animation: bounceInLeft 700ms 400ms backwards;
 }
+header p {
+  display: none;
+}
 
 main {
   display: grid;
   gap: 6.3rem;
   margin: 1.4rem 3.2rem 6rem;
 }
-main p {
-  font-family: var(--ft-secondary);
-  font-size: var(--fs-page-description);
-  color: var(--fc-description);
-  line-height: 2rem;
-  text-align: center;
-}
 
+@media (min-width: 700px) {
+  #page {
+    display: flex;
+    max-width: 1200px;
+  }
+  .card h2 {
+    display: none;
+  }
+  header {
+    width: 37.7rem;
+  }
+  header p {
+    display: block;
+    width: 27.5rem;
+  }
+  main p {
+    display: none;
+  }
+}
 @-webkit-keyframes bounceInLeft {
   0% {
     opacity: 0;
@@ -108,7 +135,6 @@ main p {
     transform: translateX(0);
   }
 }
-
 @keyframes bounceInLeft {
   0% {
     opacity: 0;

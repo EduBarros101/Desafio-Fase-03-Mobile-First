@@ -28,7 +28,7 @@
   display: grid;
   justify-content: center;
 
-  max-width: 385px;
+  max-width: 450px;
   margin: 0 auto;
 
   background: #eff1ff;
@@ -36,6 +36,7 @@
 
 #ice-cream-wrapper {
   display: grid;
+  justify-items: center;
   gap: 3.6rem;
 }
 
@@ -55,8 +56,19 @@
   }
 }
 
+.space-info {
+  font-family: var(--ft-secondary);
+  font-size: var(--fs-page-description);
+  color: var(--fc-description);
+
+  line-height: 2rem;
+  text-align: center;
+}
+
 .card {
   position: relative;
+  width: fit-content;
+
   font-size: var(--fs-ice-cream-title);
 
   animation: downToTop 500ms 100ms backwards;
@@ -91,20 +103,44 @@ header {
 
     animation: bounceInLeft 700ms 400ms backwards;
   }
+
+  p {
+    display: none;
+  }
 }
 
 main {
   display: grid;
   gap: 6.3rem;
   margin: 1.4rem 3.2rem 6rem;
+}
 
-  p {
-    font-family: var(--ft-secondary);
-    font-size: var(--fs-page-description);
-    color: var(--fc-description);
+@media (min-width: 700px) {
+  #page {
+    display: flex;
+    max-width: 1200px;
+  }
 
-    line-height: 2rem;
-    text-align: center;
+  .card {
+    h2 {
+      display: none;
+    }
+  }
+
+  header {
+    // max-width: none;
+    width: 37.7rem;
+    p {
+      display: block;
+      width: 27.5rem;
+      // margin: 3.2rem auto auto;
+    }
+  }
+
+  main {
+    p {
+      display: none;
+    }
   }
 }
 
