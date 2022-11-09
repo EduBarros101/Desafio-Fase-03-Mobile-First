@@ -8,3 +8,7 @@ Link do projeto no ar: https://edubarros101.github.io/Desafio-Fase-03-Mobile-Fir
 
 - HTML
 - Sass
+
+## Nota
+
+Desenvolvimento em andamento. A responsividade ainda precisa de atenção.
